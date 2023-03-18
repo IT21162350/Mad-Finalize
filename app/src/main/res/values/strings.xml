@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">login</string>
+    <string name="welcome_note">Welcome to IJobs</string>
+
+    <!--Login Page-->
+    <string name="Login_mail_hint">Email</string>
+    <string name="Login_password_hint">Password</string>
+    <string name="login_button">Login</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="head_registration">Registration</string>
+
+    <!--Registration Page-->
+    <string name="uname">Name</string>
+    <string name="email">Email Address</string>
+    <string name="contact">Contact Number</string>
+    <string name="company">Name of Company</string>
+    <string name="btn_registration">Register</string>
+
+    <!--Dashboard-->
+    <string name="greeting">Hello !</string>
+    <string name="name_of_user">User Name</string>
+    <string name="home">Home</string>
+    <string name="pro_pic">Pro_pic</string>
+    <string name="add_job">Add Job</string>
+    <string name="j_list">Job List</string>
+
+</resources>
