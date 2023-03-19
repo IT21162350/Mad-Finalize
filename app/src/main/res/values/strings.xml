@@ -34,4 +34,14 @@
     <!--Job List-->
     <string name="head_j_list">Job List</string>
 
+    <!--Career Guid Reg-->
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="initial_name">Name with Initials</string>
+    <string name="address">Address</string>
+    <string name="title">Title</string>
+    <string name="career_add_cv_note">Please Attach Your Resume</string>
+    <string name="reg_me">Register Me</string>
+    
+
 </resources>
