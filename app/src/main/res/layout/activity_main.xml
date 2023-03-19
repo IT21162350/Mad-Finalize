@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/welcomenote"
+        android:id="@+id/add_job_head"
         android:layout_width="186dp"
         android:layout_height="69dp"
         android:layout_marginTop="28dp"

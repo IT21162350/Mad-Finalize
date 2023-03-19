@@ -24,4 +24,11 @@
     <string name="add_job">Add Job</string>
     <string name="j_list">Job List</string>
 
+    <!--Add Job-->
+    <string name="c_name">Name of Company</string>
+    <string name="Position">Position</string>
+    <string name="exp_req">Entry Requirement</string>
+    <string name="Edu_req">Educational Requirements</string>
+    <string name="Add_job_list">Add to List</string>
+
 </resources>

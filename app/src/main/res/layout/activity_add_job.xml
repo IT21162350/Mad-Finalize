@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-        <!--Heading-->
+    <!--Heading-->
     <TextView
         android:id="@+id/add_job_head"
         android:layout_width="190dp"
@@ -26,7 +26,7 @@
         android:layout_marginTop="28dp"
         android:fontFamily="@font/abril_fatface"
         android:gravity="center"
-        android:text="@string/head_registration"
+        android:text="@string/add_job"
         android:textAllCaps="true"
         android:textColor="#000000"
         android:textSize="24sp"
@@ -54,7 +54,7 @@
         android:layout_marginRight="16dp"
         android:ems="10"
         android:fontFamily="@font/aclonica"
-        android:hint="@string/uname"
+        android:hint="@string/c_name"
         android:inputType="textPersonName"
         android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
@@ -70,7 +70,7 @@
         android:layout_marginRight="16dp"
         android:ems="10"
         android:fontFamily="@font/aclonica"
-        android:hint="@string/email"
+        android:hint="@string/Position"
         android:inputType="textPersonName"
         android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
@@ -86,7 +86,7 @@
         android:layout_marginRight="16dp"
         android:ems="10"
         android:fontFamily="@font/aclonica"
-        android:hint="@string/contact"
+        android:hint="@string/Edu_req"
         android:inputType="phone"
         android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
@@ -102,7 +102,7 @@
         android:layout_marginRight="16dp"
         android:ems="10"
         android:fontFamily="@font/aclonica"
-        android:hint="@string/company"
+        android:hint="@string/exp_req"
         android:inputType="textPersonName"
         android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
@@ -118,7 +118,7 @@
         android:layout_marginRight="16dp"
         android:background="@drawable/login_button"
         android:fontFamily="@font/aclonica"
-        android:text="@string/btn_registration"
+        android:text="@string/Add_job_list"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
