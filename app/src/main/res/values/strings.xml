@@ -46,8 +46,21 @@
     <!--Notification-->
     <string name="Notification_head">Notification</string>
     <string name="description_1">You have selected as new career guide.</string>
-    <string name="description_2">Click "Find Your Jobs" to login. </string>
+    <string name="description_2">Click  "Find Your Jobs"  to login. </string>
     <string name="notification_btn">Find Your Jobs</string>
 
+    <!--Career Guide Dashboard-->
+    <string name="img5">Guidance to find right career path </string>
+    <string name="img6">Increase the choices for success  </string>
+    <string name="img7">Provide information on defferent career </string>
+    <string name="img8"> Empowering you with better knowladge</string>
+    <string name="img9"> Saving on cost </string>
 
+    <string name="job_app_head">Job Application Form</string>
+    <string name="j_app_description">THE INFORMATION YOU SUPPLY ON THIS PAGE WILL BE TREATED IN CONFIDENCE.</string>
+    <string name="dob">Date of Birth</string>
+    <string name="next">NEXT</string>
+    <string name="edu_qu">Educational Qualifications</string>
+    <string name="work_exp">Work Experience</string>
+    <string name="submit">SUBMIT</string>
 </resources>
