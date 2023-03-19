@@ -21,8 +21,8 @@
     <!--Heading-->
     <TextView
         android:id="@+id/add_job_head"
-        android:layout_width="190dp"
-        android:layout_height="75dp"
+        android:layout_width="@dimen/add_job_height"
+        android:layout_height="@dimen/add_job_width"
         android:layout_marginTop="28dp"
         android:fontFamily="@font/abril_fatface"
         android:gravity="center"
