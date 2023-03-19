@@ -12,6 +12,9 @@
         android:theme="@style/Theme.Login"
         tools:targetApi="31">
         <activity
+            android:name=".Notification_Page"
+            android:exported="false" />
+        <activity
             android:name=".Career_Guidence_Register"
             android:exported="false" />
         <activity

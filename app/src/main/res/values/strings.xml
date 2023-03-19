@@ -42,6 +42,12 @@
     <string name="title">Title</string>
     <string name="career_add_cv_note">Please Attach Your Resume</string>
     <string name="reg_me">Register Me</string>
-    
+
+    <!--Notification-->
+    <string name="Notification_head">Notification</string>
+    <string name="description_1">You have selected as new career guide.</string>
+    <string name="description_2">Click "Find Your Jobs" to login. </string>
+    <string name="notification_btn">Find Your Jobs</string>
+
 
 </resources>

@@ -15,6 +15,9 @@
     <!--Dashboard-->
     <color name="d_start">#0099ff</color>
     <color name="s_end">#54bbff</color>
+    
+    <color name="notification_view">#ECD59F</color>
+
 
     
 </resources>
