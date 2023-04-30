@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1031443636862",
+    "project_id": "mad-crud-ijobs",
+    "storage_bucket": "mad-crud-ijobs.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1031443636862:android:e6dbcf6c9e20efc19f6e2f",
+        "android_client_info": {
+          "package_name": "com.example.login"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1031443636862-06mjrti0f08mnlru4bhgkd10sd1p1o8e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3mhYN7WuFVznMET1UxgllsCoTG3ApTCg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1031443636862-06mjrti0f08mnlru4bhgkd10sd1p1o8e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

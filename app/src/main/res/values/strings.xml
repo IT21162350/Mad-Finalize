@@ -63,4 +63,18 @@
     <string name="edu_qu">Educational Qualifications</string>
     <string name="work_exp">Work Experience</string>
     <string name="submit">SUBMIT</string>
+
+    <!---->
+    <string name="headregistration"> Register </string>
+    <string name="firstname">First Name </string>
+    <string name="lastname">Last Name </string>
+    <string name="mob_no">Mobile Number </string>
+    <string name="email_add">Email Address </string>
+    <string name="res_address">Address </string>
+    <string name="pw">Password </string>
+    <string name="c_pw">Confirm Password </string>
+    <string name="register_btn">Register </string>
+    <string name="salary_expectation">Salary Expectation </string>
+    <string name="search">Search Job </string>
+
 </resources>

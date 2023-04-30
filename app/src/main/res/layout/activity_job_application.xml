@@ -47,7 +47,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/userName"
+        android:id="@+id/txtcomName"
         android:layout_width="335dp"
         android:layout_height="50dp"
         android:layout_marginLeft="16dp"
@@ -63,7 +63,7 @@
         app:layout_constraintTop_toBottomOf="@+id/top_bg" />
 
     <EditText
-        android:id="@+id/contact"
+        android:id="@+id/txtEduReq"
         android:layout_width="335dp"
         android:layout_height="50dp"
         android:layout_marginLeft="16dp"
@@ -76,10 +76,10 @@
         android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Email" />
+        app:layout_constraintTop_toBottomOf="@+id/txtPosition" />
 
     <EditText
-        android:id="@+id/Compay"
+        android:id="@+id/txtExpReq"
         android:layout_width="335dp"
         android:layout_height="50dp"
         android:layout_marginLeft="16dp"
@@ -92,10 +92,10 @@
         android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contact" />
+        app:layout_constraintTop_toBottomOf="@+id/txtEduReq" />
 
     <EditText
-        android:id="@+id/Email"
+        android:id="@+id/txtPosition"
         android:layout_width="335dp"
         android:layout_height="50dp"
         android:layout_marginLeft="16dp"
@@ -108,10 +108,10 @@
         android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userName" />
+        app:layout_constraintTop_toBottomOf="@+id/txtcomName" />
 
     <Button
-        android:id="@+id/reg"
+        android:id="@+id/addJList"
         android:layout_width="170dp"
         android:layout_height="50dp"
         android:layout_marginLeft="16dp"
@@ -126,7 +126,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Compay" />
+        app:layout_constraintTop_toBottomOf="@+id/txtExpReq" />
 
     <TextView
         android:id="@+id/textView15"
