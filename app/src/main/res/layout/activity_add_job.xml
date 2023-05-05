@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    tools:context=".Register">
+    tools:context=".activities.Register">
 
     <!--Top Background-->
     <View
@@ -20,7 +20,7 @@
 
     <!--Heading-->
     <TextView
-        android:id="@+id/add_job_head"
+        android:id="@+id/Jhead"
         android:layout_width="@dimen/add_job_height"
         android:layout_height="@dimen/add_job_width"
         android:layout_marginTop="28dp"
@@ -50,10 +50,10 @@
         android:layout_width="335dp"
         android:layout_height="50dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="32dp"
         android:layout_marginRight="16dp"
         android:ems="10"
-        android:fontFamily="@font/aclonica"
+        android:fontFamily="sans-serif"
         android:hint="@string/c_name"
         android:inputType="textPersonName"
         android:textColorHint="#000000"
@@ -62,30 +62,14 @@
         app:layout_constraintTop_toBottomOf="@+id/top_bg" />
 
     <EditText
-        android:id="@+id/txtPosition"
-        android:layout_width="335dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"
-        android:ems="10"
-        android:fontFamily="@font/aclonica"
-        android:hint="@string/Position"
-        android:inputType="textPersonName"
-        android:textColorHint="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtcomName" />
-
-    <EditText
         android:id="@+id/txtEduReq"
         android:layout_width="335dp"
         android:layout_height="50dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="16dp"
         android:ems="10"
-        android:fontFamily="@font/aclonica"
+        android:fontFamily="sans-serif"
         android:hint="@string/Edu_req"
         android:inputType="textPersonName"
         android:textColorHint="#000000"
@@ -98,10 +82,10 @@
         android:layout_width="335dp"
         android:layout_height="50dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:layout_marginRight="16dp"
         android:ems="10"
-        android:fontFamily="@font/aclonica"
+        android:fontFamily="sans-serif"
         android:hint="@string/exp_req"
         android:inputType="textPersonName"
         android:textColorHint="#000000"
@@ -109,21 +93,67 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtEduReq" />
 
+    <EditText
+        android:id="@+id/txtPosition"
+        android:layout_width="335dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="16dp"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:hint="@string/Position"
+        android:inputType="textPersonName"
+        android:textColorHint="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtcomName" />
+
     <Button
         android:id="@+id/addJList"
         android:layout_width="170dp"
         android:layout_height="50dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="100dp"
         android:layout_marginRight="16dp"
         android:background="@drawable/login_button"
-        android:fontFamily="@font/aclonica"
+        android:fontFamily="sans-serif-medium"
         android:text="@string/Add_job_list"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtExpReq" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/login_button"
+        android:fontFamily="sans-serif-medium"
+        android:text="BACK"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtExpReq" />
+
+    <EditText
+        android:id="@+id/txtEmail"
+        android:layout_width="337dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:textColorHint="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtExpReq" />
 </androidx.constraintlayout.widget.ConstraintLayout>

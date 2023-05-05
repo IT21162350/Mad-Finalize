@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fadeScrollbars="false"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
 
     <View
         android:id="@+id/top_bg"
@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/add_job_head"
+        android:id="@+id/Jhead"
         android:layout_width="186dp"
         android:layout_height="69dp"
         android:layout_marginTop="28dp"

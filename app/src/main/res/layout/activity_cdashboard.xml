@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".c_dashboard">
+    tools:context=".activities.c_dashboard">
 
     <ScrollView
         android:id="@+id/scrol_view_layout"
@@ -151,9 +151,8 @@
         android:id="@+id/btnJobList"
         android:layout_width="85dp"
         android:layout_height="85dp"
-        android:layout_marginTop="288dp"
+        android:layout_marginTop="224dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrol_view_layout"
         app:srcCompat="@drawable/baseline_list_24" />

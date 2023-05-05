@@ -1,10 +1,10 @@
-package com.example.login
+package com.example.login.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import android.widget.ImageButton
+import com.example.login.R
 
 class c_dashboard : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,8 +13,8 @@ class c_dashboard : AppCompatActivity() {
 
         // Object for buttons
         val home: ImageButton = findViewById(R.id.btnHome);
-        val jobList: ImageButton = findViewById(R.id.btnJobList);
         val addJob: ImageButton = findViewById(R.id.btnAddJob);
+        val btnJobList: ImageButton = findViewById(R.id.btnJobList);
 
         //home
         home.setOnClickListener(){
@@ -22,13 +22,17 @@ class c_dashboard : AppCompatActivity() {
             startActivity(homeIntent)
         }
 
-        //JobList
+        //addJob
         addJob.setOnClickListener(){
             val addJobIntent = Intent(this, add_job::class.java);
-            startActivity(addJobIntent)
+            startActivity(addJobIntent);
         }
 
-        //Add job
+        //Job List
+        btnJobList.setOnClickListener(){
+            val jobListIntent = Intent(this, jobList::class.java);
+            startActivity(jobListIntent);
+        }
 
     }
 }

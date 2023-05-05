@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    tools:context=".Register">
+    tools:context=".activities.Register">
 
     <!--Top Background-->
     <View
@@ -20,7 +20,7 @@
 
         <!--Heading-->
     <TextView
-        android:id="@+id/add_job_head"
+        android:id="@+id/Jhead"
         android:layout_width="190dp"
         android:layout_height="75dp"
         android:layout_marginTop="28dp"
