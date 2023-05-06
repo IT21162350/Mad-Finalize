@@ -12,6 +12,27 @@
         android:theme="@style/Theme.Login"
         tools:targetApi="31">
         <activity
+            android:name=".HansaliAdission"
+            android:exported="false" />
+        <activity
+            android:name=".HansaliLogin"
+            android:exported="false" />
+        <activity
+            android:name=".UpdateJobSeeker"
+            android:exported="false" />
+        <activity
+            android:name=".RegJobSeeker"
+            android:exported="false" />
+        <activity
+            android:name=".activities.jobSeekerProfile"
+            android:exported="false" />
+        <activity
+            android:name=".regJobSeeker"
+            android:exported="false" />
+        <activity
+            android:name=".aditionalInfo"
+            android:exported="false" />
+        <activity
             android:name=".UpdateDialog"
             android:exported="false" />
         <activity
