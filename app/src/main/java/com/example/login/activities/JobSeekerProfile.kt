@@ -1,15 +1,23 @@
 package com.example.login.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import com.example.login.R
-import org.w3c.dom.Text
+import com.example.login.models.JobSeekerModel
+import com.google.firebase.database.FirebaseDatabase
+
+
 
 class JobSeekerProfile : AppCompatActivity() {
 
+    private lateinit var jsId: TextView
     private lateinit var fname: TextView
     private lateinit var lname: TextView
     private lateinit var cnum: TextView
@@ -23,9 +31,23 @@ class JobSeekerProfile : AppCompatActivity() {
         setContentView(R.layout.activity_job_seeker_profile)
         initView()
         setValuesToViews()
+
+        btnDelete.setOnClickListener() {
+            deleteRecord(
+                intent.getStringExtra("jsId").toString()
+            )
+        }
+
+        btnUpdate.setOnClickListener() {
+            openUpdateDialog(
+                intent.getStringExtra("jsId").toString(),
+                intent.getStringExtra("fname").toString()
+            )
+        }
     }
 
     private fun initView() {
+        jsId = findViewById(R.id.jsId)
         fname = findViewById(R.id.jsFname)
         lname = findViewById(R.id.jsLname)
         cnum = findViewById(R.id.jsMnumber)
@@ -36,10 +58,89 @@ class JobSeekerProfile : AppCompatActivity() {
     }
 
     private fun setValuesToViews() {
+        jsId.text = intent.getStringExtra("jsId")
         fname.text = intent.getStringExtra("fname")
         lname.text = intent.getStringExtra("lname")
         cnum.text = intent.getStringExtra("cnum")
         email.text = intent.getStringExtra("email")
         address.text =  intent.getStringExtra("address")
+    }
+
+    private fun deleteRecord(id: String?) {
+        val dbRef =  FirebaseDatabase.getInstance().getReference("JobSeeker").child(id!!)
+        val mTask = dbRef.removeValue()
+        Log.d("TAG", id);
+
+        //If delete success
+        mTask.addOnSuccessListener {
+            Toast.makeText(this, "Profile Deleted", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, SeekerFetching::class.java)
+            startActivity(intent)
+
+        } //If Delete failed
+            .addOnFailureListener {
+                error ->
+                Toast.makeText(this, "Error in Profile Deleting", Toast.LENGTH_SHORT).show()
+            }
+    }
+
+    private fun openUpdateDialog( jsId: String, jsfName: String) {
+        val mDialog = AlertDialog.Builder(this)
+        val inflater = layoutInflater
+        val mDialogView = inflater.inflate(R.layout.update_profile, null)
+
+        mDialog.setView(mDialogView)
+
+        val etjsFname = mDialogView.findViewById<EditText>(R.id.jsFname)
+        val etjsLname = mDialogView.findViewById<EditText>(R.id.jsLname)
+        val etjsCnum = mDialogView.findViewById<EditText>(R.id.jsMnumber)
+        val etjsEmail = mDialogView.findViewById<EditText>(R.id.jsEmail)
+        val etjsAddress = mDialogView.findViewById<EditText>(R.id.jsAddress)
+        val btnUpdateData = mDialogView.findViewById<Button>(R.id.btnUpdateData)
+
+        etjsFname.setText(intent.getStringExtra("fname").toString())
+        etjsLname.setText(intent.getStringExtra("lname").toString())
+        etjsCnum.setText(intent.getStringExtra("cnum").toString())
+        etjsEmail.setText(intent.getStringExtra("email").toString())
+        etjsAddress.setText(intent.getStringExtra("address").toString())
+
+        mDialog.setTitle("Update Profile")
+
+        val alertDialog = mDialog.create()
+        alertDialog.show()
+
+        btnUpdateData.setOnClickListener(){
+            updateJobSeekerData (
+                jsId,
+                etjsFname.text.toString(),
+                etjsLname.text.toString(),
+                etjsCnum.text.toString(),
+                etjsEmail.text.toString(),
+                etjsAddress.text.toString()
+            )
+            Toast.makeText(applicationContext, "Profile Updated", Toast.LENGTH_LONG).show()
+
+            fname.text = etjsFname.text.toString()
+            lname.text = etjsLname.text.toString()
+            cnum.text = etjsCnum.text.toString()
+            email.text = etjsEmail.text.toString()
+            address.text =  etjsAddress.text.toString()
+
+            alertDialog.dismiss()
+        }
+    }
+
+    //Update Method
+    private fun updateJobSeekerData (
+        id: String,
+        fname: String,
+        lname: String,
+        cnum: String,
+        email: String,
+        address: String
+    ) {
+        val dbRef = FirebaseDatabase.getInstance().getReference("JobSeeker").child(id)
+        val jsInfo = JobSeekerModel(id, fname, lname, cnum, email, address)
+        dbRef.setValue(jsInfo)
     }
 }

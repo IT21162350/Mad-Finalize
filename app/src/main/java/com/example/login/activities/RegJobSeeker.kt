@@ -82,7 +82,7 @@ class RegJobSeeker : AppCompatActivity() {
         }
         else {
             val jsId = dbRef.push().key!!
-            val jobSeeker = JobSeekerModel(jsFname, jsLname, jsNum, jsEmail, jsAddress, jsPassword)
+            val jobSeeker = JobSeekerModel(jsId, jsFname, jsLname, jsNum, jsEmail, jsAddress, jsPassword)
 
             dbRef.child(jsId).setValue(jobSeeker).addOnCompleteListener {
                 Toast.makeText(applicationContext, "Data Inserted Successfully", Toast.LENGTH_SHORT).show()

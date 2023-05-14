@@ -54,7 +54,7 @@ class SeekerFetching : AppCompatActivity() {
                         override fun onItemClick(position: Int) {
                             val intent = Intent(this@SeekerFetching, JobSeekerProfile::class.java)
                             //put extra data
-                            intent.putExtra("seekerID", JobSeekerList[position].jsId)
+                            intent.putExtra("jsId", JobSeekerList[position].jsId)
                             intent.putExtra("fname", JobSeekerList[position].f_name)
                             intent.putExtra("lname", JobSeekerList[position].l_name)
                             intent.putExtra("cnum", JobSeekerList[position].c_num)
