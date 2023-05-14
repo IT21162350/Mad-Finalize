@@ -25,6 +25,9 @@ class RegJobSeeker : AppCompatActivity() {
 
     private lateinit var dbRef: DatabaseReference;
 
+    //patterns
+    private var pattern = Regex("^\\w+([.-]?\\w+)*@\\w+([.-]?\\w+)*(\\.\\w{2,3})+$")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reg_job_seeker)
@@ -79,6 +82,9 @@ class RegJobSeeker : AppCompatActivity() {
         }
         if (jsPassword != jsconPassword){
             Toast.makeText(applicationContext, "Password is mismatching", Toast.LENGTH_SHORT).show()
+        }
+        if (!pattern.matches(title)) {
+            etJsSeekerFname.error = "Invalid Email "
         }
         else {
             val jsId = dbRef.push().key!!
