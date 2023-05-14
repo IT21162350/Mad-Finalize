@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity4">
+    tools:context=".activities.JobSeekerProfile">
 
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="114dp"
-        android:layout_height="99dp"
+        android:layout_width="69dp"
+        android:layout_height="64dp"
         android:layout_marginStart="264dp"
         android:layout_marginBottom="596dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -51,76 +51,73 @@
             app:layout_constraintTop_toTopOf="@+id/guideline"
             tools:ignore="MissingConstraints" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/jsFname"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/jsLname"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/jsMnumber"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/jsEmail"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbarSize="6dp"
+                android:text="Address"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/jsAddress"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:inputType="textPostalAddress" />
+
+            <Button
+                android:id="@+id/btnUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Update" />
+
+            <Button
+                android:id="@+id/btnJsDel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Delete Account" />
+
+        </LinearLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:padding="16dp"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="-56dp">
-
-        <EditText
-            android:id="@+id/jsFname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Hansali" />
-
-        <EditText
-            android:id="@+id/jsLname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Jayathilakka" />
-
-        <EditText
-            android:id="@+id/jsMnumber"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="0769959517" />
-
-        <EditText
-            android:id="@+id/jsEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="hansali@gmail.com" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scrollbarSize="6dp"
-            android:text="Address"
-            android:textSize="16sp" />
-
-        <EditText
-            android:id="@+id/jsAddress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPostalAddress"
-            android:text="kjdgefuhvdJKchbdk" />
-
-        <Button
-            android:id="@+id/btnUpdate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Update" />
-        <Button
-            android:id="@+id/btnJsReg"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Delete Account" />
-
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

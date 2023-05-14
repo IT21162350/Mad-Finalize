@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools" >
 
     <application
         android:allowBackup="true"
@@ -10,30 +10,27 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.Login"
-        tools:targetApi="31">
+        tools:targetApi="31" >
         <activity
-            android:name=".HansaliAdission"
+            android:name=".activities.JobSeekerProfile"
             android:exported="false" />
         <activity
-            android:name=".HansaliLogin"
+            android:name=".activities.SeekerFetching"
             android:exported="false" />
         <activity
-            android:name=".UpdateJobSeeker"
+            android:name=".activities.HansaliAdission"
             android:exported="false" />
         <activity
-            android:name=".RegJobSeeker"
+            android:name=".activities.HansaliLogin"
+            android:exported="false" />
+        <activity
+            android:name=".activities.UpdateJobSeeker"
+            android:exported="false" />
+        <activity
+            android:name=".activities.RegJobSeeker"
             android:exported="false" />
         <activity
             android:name=".activities.jobSeekerProfile"
-            android:exported="false" />
-        <activity
-            android:name=".regJobSeeker"
-            android:exported="false" />
-        <activity
-            android:name=".aditionalInfo"
-            android:exported="false" />
-        <activity
-            android:name=".UpdateDialog"
             android:exported="false" />
         <activity
             android:name=".activities.oneJobDetail"
@@ -70,7 +67,7 @@
             android:exported="false" />
         <activity
             android:name=".activities.MainActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

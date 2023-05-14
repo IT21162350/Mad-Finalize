@@ -1,10 +1,12 @@
-package com.example.login
+package com.example.login.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.example.login.R
 import com.example.login.models.JobSeekerModel
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -84,6 +86,8 @@ class RegJobSeeker : AppCompatActivity() {
 
             dbRef.child(jsId).setValue(jobSeeker).addOnCompleteListener {
                 Toast.makeText(applicationContext, "Data Inserted Successfully", Toast.LENGTH_SHORT).show()
+                val SeekerFetching = Intent(this, SeekerFetching::class.java)
+                startActivity(SeekerFetching)
             }
                 .addOnFailureListener { err ->
                     Toast.makeText(applicationContext, "Data Inserting Failed ${err.message}", Toast.LENGTH_SHORT).show()

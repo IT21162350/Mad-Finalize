@@ -1,22 +1,45 @@
 package com.example.login.activities
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 import com.example.login.R
-import com.example.login.UpdateJobSeeker
+import org.w3c.dom.Text
 
-class jobSeekerProfile : AppCompatActivity() {
+class JobSeekerProfile : AppCompatActivity() {
+
+    private lateinit var fname: TextView
+    private lateinit var lname: TextView
+    private lateinit var cnum: TextView
+    private lateinit var email: TextView
+    private lateinit var address: TextView
+    private lateinit var btnUpdate: Button
+    private lateinit var btnDelete: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_job_seeker_profile)
+        initView()
+        setValuesToViews()
+    }
 
-        val btnUpdate: Button = findViewById(R.id.btnUpdate)
+    private fun initView() {
+        fname = findViewById(R.id.jsFname)
+        lname = findViewById(R.id.jsLname)
+        cnum = findViewById(R.id.jsMnumber)
+        email =  findViewById(R.id.jsEmail)
+        address = findViewById(R.id.jsAddress)
+        btnUpdate = findViewById(R.id.btnUpdate)
+        btnDelete =  findViewById(R.id.btnJsDel)
+    }
 
-        btnUpdate.setOnClickListener() {
-            val updateForm = Intent(this, UpdateJobSeeker::class.java)
-            startActivity(updateForm)
-        }
+    private fun setValuesToViews() {
+        fname.text = intent.getStringExtra("fname")
+        lname.text = intent.getStringExtra("lname")
+        cnum.text = intent.getStringExtra("cnum")
+        email.text = intent.getStringExtra("email")
+        address.text =  intent.getStringExtra("address")
     }
 }

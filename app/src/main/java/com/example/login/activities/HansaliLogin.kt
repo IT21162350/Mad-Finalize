@@ -1,10 +1,10 @@
-package com.example.login
+package com.example.login.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import com.example.login.activities.jobSeekerProfile
+import com.example.login.R
 
 class HansaliLogin : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,10 +13,6 @@ class HansaliLogin : AppCompatActivity() {
 
         val btnLogin: Button = findViewById(R.id.loginButton);
 
-        btnLogin.setOnClickListener() {
-            val login = Intent(this, jobSeekerProfile::class.java)
-            startActivity(login)
-        }
 
         val btnRegister: Button = findViewById(R.id.registerButton);
 
