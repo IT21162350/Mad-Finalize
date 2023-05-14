@@ -16,13 +16,12 @@ class MainActivity : AppCompatActivity() {
         val login: Button = findViewById(R.id.login)
 
         login.setOnClickListener {
-            val hansali = Intent(this, c_dashboard::class.java)
-            startActivity(hansali)
+            val mainDashboard = Intent(this, mainDashbvord::class.java)
+            startActivity(mainDashboard)
         }
 
         signup.setOnClickListener{
-            val RegJobSeeker = Intent(this, RegJobSeeker::class.java)
-            startActivity(RegJobSeeker)
+
         }
 
     }

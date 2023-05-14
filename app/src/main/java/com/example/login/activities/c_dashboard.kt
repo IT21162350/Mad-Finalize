@@ -18,7 +18,7 @@ class c_dashboard : AppCompatActivity() {
 
         //home
         home.setOnClickListener(){
-            val homeIntent = Intent(this, MainActivity::class.java);
+            val homeIntent = Intent(this, Career_Guide_Dashboard::class.java);
             startActivity(homeIntent)
         }
 

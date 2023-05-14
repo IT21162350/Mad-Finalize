@@ -1,82 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
-    tools:context=".activities.Register">
-
-    <!--Top Background-->
-    <View
-        android:id="@+id/top_bg"
-        android:layout_width="wrap_content"
-        android:layout_height="150dp"
-        android:background="@drawable/wave"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!--Heading-->
-
-    <!--Bottom Background-->
-    <TextView
-        android:id="@+id/Jhead"
-        android:layout_width="190dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/abril_fatface"
-        android:gravity="center"
-        android:text="@string/head_registration"
-        android:textAllCaps="true"
-        android:textColor="#000000"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/top_bg" />
-
-    <View
-        android:id="@+id/bottom_bg"
-        android:layout_width="415dp"
-        android:layout_height="85dp"
-        android:background="@drawable/bottom_background"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/cgFname"
-        android:layout_width="335dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginRight="16dp"
-        android:ems="10"
-        android:fontFamily="@font/aclonica"
-        android:hint="@string/first_name"
-        android:inputType="textPersonName"
-        android:textColorHint="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/top_bg" />
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <EditText
         android:id="@+id/cgLname"
         android:layout_width="335dp"
         android:layout_height="50dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="89dp"
         android:layout_marginRight="16dp"
         android:ems="10"
         android:fontFamily="@font/aclonica"
         android:hint="@string/last_name"
         android:inputType="textPersonName"
         android:textColorHint="#000000"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cgFname" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/cdInitName"
@@ -90,6 +33,7 @@
         android:hint="@string/initial_name"
         android:inputType="textPersonName"
         android:textColorHint="#000000"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cgLname" />
@@ -106,6 +50,7 @@
         android:hint="@string/address"
         android:inputType="textPersonName"
         android:textColorHint="#000000"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cdInitName" />
@@ -122,25 +67,28 @@
         android:hint="@string/title"
         android:inputType="textPersonName"
         android:textColorHint="#000000"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cdInitName" />
 
+
     <Button
-        android:id="@+id/RegGuider"
-        android:layout_width="170dp"
-        android:layout_height="50dp"
+        android:id="@+id/updateGuider"
+        android:layout_width="135dp"
+        android:layout_height="51dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="92dp"
         android:layout_marginRight="16dp"
         android:background="@drawable/login_button"
         android:fontFamily="@font/aclonica"
-        android:text="@string/reg_me"
+        android:text="Update"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cdAddress" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
