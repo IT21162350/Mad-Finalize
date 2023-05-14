@@ -146,4 +146,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cdAddress" />
 
+    <TextView
+        android:id="@+id/fName"
+        android:layout_width="337dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="23dp"
+        android:textColor="#000000"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_bg" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

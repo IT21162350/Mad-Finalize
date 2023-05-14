@@ -16,6 +16,7 @@ import org.w3c.dom.Text
 
 class GuiderProfile : AppCompatActivity() {
 
+    private lateinit var tvFirstName: TextView
     private lateinit var tvGLname: TextView
     private lateinit var tvIname: TextView
     private lateinit var tvGaddress: TextView
@@ -62,6 +63,7 @@ class GuiderProfile : AppCompatActivity() {
 
     private fun initView() {
 
+        tvFirstName = findViewById(R.id.fName)
         tvGLname = findViewById(R.id.cgLname)
         tvIname = findViewById(R.id.cdInitName)
         tvGaddress = findViewById(R.id.cdAddress)
@@ -71,6 +73,7 @@ class GuiderProfile : AppCompatActivity() {
     }
 
     private fun setValuesToViews() {
+        tvFirstName.text = intent.getStringExtra("GuiderFname")
         tvGLname.text = intent.getStringExtra("guiderLname")
         tvIname.text = intent.getStringExtra("guiderInitname")
         tvGaddress.text = intent.getStringExtra("guiderAddress")

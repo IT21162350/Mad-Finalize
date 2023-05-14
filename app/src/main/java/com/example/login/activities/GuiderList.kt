@@ -56,7 +56,7 @@ class GuiderList : AppCompatActivity() {
 
                             //Put extra data
                             intent.putExtra("guiderId", guiderList[position].guiderId)
-                            intent.putExtra("guiderfirstname", guiderList[position].GuiderFname)
+                            intent.putExtra("GuiderFname", guiderList[position].GuiderFname)
                             intent.putExtra("guiderLname", guiderList[position].GuiderLname)
                             intent.putExtra("guiderInitname", guiderList[position].GuiderInitName)
                             intent.putExtra("guiderAddress", guiderList[position].GuiderAddress)
