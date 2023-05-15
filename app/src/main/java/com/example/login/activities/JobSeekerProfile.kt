@@ -1,6 +1,7 @@
 package com.example.login.activities
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -25,6 +26,7 @@ class JobSeekerProfile : AppCompatActivity() {
     private lateinit var address: TextView
     private lateinit var btnUpdate: Button
     private lateinit var btnDelete: Button
+    private lateinit var btnEmail: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,6 +46,29 @@ class JobSeekerProfile : AppCompatActivity() {
                 intent.getStringExtra("fname").toString()
             )
         }
+
+        btnEmail.setOnClickListener() {
+            val intent = Intent(Intent.ACTION_SENDTO)
+            intent.data = Uri.parse("mailto:")
+            intent.putExtra(Intent.EXTRA_EMAIL, arrayOf("recipient@example.com")) // Set the recipient email address
+            intent.putExtra(Intent.EXTRA_SUBJECT, "Email subject") // Set the email subject
+
+            // Set explicit package name for the Gmail app
+            intent.setPackage("com.google.android.gm")
+
+            if (intent.resolveActivity(packageManager) != null) {
+                startActivity(intent)
+            } else {
+                // If the Gmail app is not available, fall back to other email apps or show an error message
+                val emailAppChooser = Intent.createChooser(intent, "Open with")
+                if (emailAppChooser.resolveActivity(packageManager) != null) {
+                    startActivity(emailAppChooser)
+                } else {
+                    Toast.makeText(applicationContext, "No email app found.", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+        }
     }
 
     private fun initView() {
@@ -55,6 +80,7 @@ class JobSeekerProfile : AppCompatActivity() {
         address = findViewById(R.id.jsAddress)
         btnUpdate = findViewById(R.id.btnUpdate)
         btnDelete =  findViewById(R.id.btnJsDel)
+        btnEmail = findViewById(R.id.btnEmail)
     }
 
     private fun setValuesToViews() {

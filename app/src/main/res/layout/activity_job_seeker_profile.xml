@@ -155,6 +155,12 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <Button
+                android:id="@+id/btnEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="E-Mail" />
+
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

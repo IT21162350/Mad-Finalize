@@ -1,8 +1,10 @@
 package com.example.login.activities
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
@@ -27,6 +29,22 @@ class jobList : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_job_list)
+
+        //get count
+        val databaseReference = FirebaseDatabase.getInstance().getReference("your_node")
+
+        databaseReference.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val recordCount = dataSnapshot.childrenCount
+                // Use the recordCount as needed
+                Log.d(TAG, "Record count: $recordCount")
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                // Handle the error
+            }
+        })
+
 
         JobRecyclerView = findViewById(R.id.jobListView);
         JobRecyclerView.layoutManager = LinearLayoutManager(this);

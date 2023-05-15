@@ -1,5 +1,6 @@
 package com.example.login.activities
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -23,6 +24,19 @@ class GuiderList : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_guider_list)
+        //Count
+        val databaseReference = FirebaseDatabase.getInstance().getReference("your_node")
+
+        databaseReference.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val recordCount = dataSnapshot.childrenCount
+                // Use the recordCount as needed
+                Log.d(TAG, "Record count: $recordCount")
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+            }
+        })
 
         guiderRecyclerView = findViewById(R.id.guider_recyclerView)
         guiderRecyclerView.layoutManager =LinearLayoutManager(this)
