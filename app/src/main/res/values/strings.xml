@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">login</string>
-    <string name="welcome_note">Welcome to IJobs</string>
+    <string name="welcome_note">Welcome to Esteem Careers</string>
 
     <!--Login Page-->
     <string name="Login_mail_hint">Email</string>
@@ -33,5 +33,48 @@
 
     <!--Job List-->
     <string name="head_j_list">Job List</string>
+
+    <!--Career Guid Reg-->
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="initial_name">Name with Initials</string>
+    <string name="address">Address</string>
+    <string name="title">Title</string>
+    <string name="career_add_cv_note">Please Attach Your Resume</string>
+    <string name="reg_me">Register Me</string>
+
+    <!--Notification-->
+    <string name="Notification_head">Notification</string>
+    <string name="description_1">You have selected as new career guide.</string>
+    <string name="description_2">Click Find Your Job to login. </string>
+    <string name="notification_btn">Find Your Jobs</string>
+
+    <!--Career Guide Dashboard-->
+    <string name="img5">Guidance to find right career path </string>
+    <string name="img6">Increase the choices for success  </string>
+    <string name="img7">Provide information on defferent career </string>
+    <string name="img8"> Empowering you with better knowladge</string>
+    <string name="img9"> Saving cost </string>
+
+    <string name="job_app_head">Job Application Form</string>
+    <string name="j_app_description">THE INFORMATION YOU SUPPLY ON THIS PAGE WILL BE TREATED IN CONFIDENCE.</string>
+    <string name="dob">Date of Birth</string>
+    <string name="next">NEXT</string>
+    <string name="edu_qu">Educational Qualifications</string>
+    <string name="work_exp">Work Experience</string>
+    <string name="submit">SUBMIT</string>
+
+    <!---->
+    <string name="headregistration"> Register </string>
+    <string name="firstname">First Name </string>
+    <string name="lastname">Last Name </string>
+    <string name="mob_no">Mobile Number </string>
+    <string name="email_add">Email Address </string>
+    <string name="res_address">Address </string>
+    <string name="pw">Password </string>
+    <string name="c_pw">Confirm Password </string>
+    <string name="register_btn">Register </string>
+    <string name="salary_expectation">Salary Expectation </string>
+    <string name="search">Search Job </string>
 
 </resources>

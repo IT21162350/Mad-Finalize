@@ -1,11 +1,12 @@
-package com.example.login
+package com.example.login.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.login.R
 
-class Register : AppCompatActivity() {
+class UpdateJobSeeker : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register)
+        setContentView(R.layout.activity_update_job_seeker)
     }
 }

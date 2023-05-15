@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="heigth">155dp</dimen>
+    <dimen name="width">100dp</dimen>
+    <dimen name="height">155dp</dimen>
+    <dimen name="n_dtn_width">50dp</dimen>
+    <dimen name="n_btn_hight">150dp</dimen>
+    <dimen name="j_form_height">355dp</dimen>
+    <dimen name="j_form_width">50dp</dimen>
+    <dimen name="j_form_submit_height">170</dimen>
+    <dimen name="j_form_submit_width">50dp</dimen>
+    <dimen name="add_job_height">190dp</dimen>
+    <dimen name="add_job_width">75dp</dimen>
+    <dimen name="home_icon_height">85dp</dimen>
+    <dimen name="home_icon_width">85dp</dimen>
+    <dimen name="login_input_height">350dp</dimen>
+    <dimen name="login_input_width">60dp</dimen>
+    <dimen name="login_btn_height">190dp</dimen>
+    <dimen name="login_btn_width">50dp</dimen>
+    <dimen name="pro_pic">120dp</dimen>
+    <dimen name="icon_text_height">89dp</dimen>
+    <dimen name="icon_text_width">27dp</dimen>
+    <dimen name="reg_input_height">170dp</dimen>
+    <dimen name="reg_dp_width">50dp</dimen>
+</resources>
