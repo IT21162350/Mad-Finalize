@@ -43,6 +43,7 @@ class MainActivity : AppCompatActivity() {
                             Toast.makeText(applicationContext, "Authentication failed.", Toast.LENGTH_SHORT).show()
                         }
                     }
+
             }
         }
 
