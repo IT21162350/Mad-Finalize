@@ -26,7 +26,7 @@ class RegJobSeeker : AppCompatActivity() {
     private lateinit var dbRef: DatabaseReference;
 
     //patterns
-    private var pattern = Regex("^\\w+([.-]?\\w+)*@\\w+([.-]?\\w+)*(\\.\\w{2,3})+$")
+    private var pattern = Regex("^\\w+([.-]?\\w+)*@gmail\\.com$")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -63,28 +63,27 @@ class RegJobSeeker : AppCompatActivity() {
             etJsSeekerFname.error =  "Please add First Name!"
         }
         if (jsLname.isEmpty()){
-            etJsSeekerFname.error =  "Please add Last Name!"
+            etJsSeekerLname.error =  "Please add Last Name!"
         }
         if (jsNum.isEmpty()){
-            etJsSeekerFname.error =  "Please add Contact Number!"
+            etJsMnumber.error =  "Please add Contact Number!"
         }
         if (jsEmail.isEmpty()){
-            etJsSeekerFname.error =  "Please add Email Address!"
+            etJsEmail.error =  "Please add Email Address!"
         }
         if (jsAddress.isEmpty()){
-            etJsSeekerFname.error =  "Please add Address!!"
+            etJsAddress.error =  "Please add Address!!"
         }
         if (jsPassword.isEmpty()){
-            etJsSeekerFname.error =  "Please add The Password!"
+            etJspassword.error =  "Please add The Password!"
         }
         if (jsconPassword.isEmpty()){
-            etJsSeekerFname.error =  "Please Re enter Your Password!!"
+            etJsConPassword.error =  "Please Re enter Your Password!!"
         }
-        if (jsPassword != jsconPassword){
+        if (jsPassword != jsconPassword || jsconPassword !=jsPassword){
             Toast.makeText(applicationContext, "Password is mismatching", Toast.LENGTH_SHORT).show()
-        }
-        if (!pattern.matches(title)) {
-            etJsSeekerFname.error = "Invalid Email "
+        } else if (!pattern.matches(jsEmail)) {
+            etJsEmail.error = "Invalid Email "
         }
         else {
             val jsId = dbRef.push().key!!

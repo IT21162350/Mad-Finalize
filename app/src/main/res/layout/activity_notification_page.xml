@@ -29,8 +29,8 @@
 
     <View
         android:id="@+id/view3"
-        android:layout_width="391dp"
-        android:layout_height="229dp"
+        android:layout_width="381dp"
+        android:layout_height="277dp"
         android:background="@drawable/notification_panel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -80,11 +80,11 @@
 
     <Button
         android:id="@+id/btnGuiderList"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
+        android:layout_width="221dp"
+        android:layout_height="63dp"
         android:layout_marginTop="24dp"
         android:backgroundTint="@color/notification_view"
-        android:text="@string/notification_btn"
+        android:text="Go To Guider List"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
