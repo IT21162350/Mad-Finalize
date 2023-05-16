@@ -1,8 +1,10 @@
 package com.example.login.activities
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
@@ -12,6 +14,7 @@ import com.example.login.R
 import com.example.login.adepters.JobAdapter
 import com.example.login.models.jobModel
 import com.google.firebase.database.*
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 
 class jobList : AppCompatActivity() {
@@ -42,6 +45,19 @@ class jobList : AppCompatActivity() {
             val backDashbord = Intent(this, c_dashboard::class.java);
             startActivity(backDashbord);
         }
+
+        //Count
+        val collectionReference = FirebaseFirestore.getInstance().collection("your_collection")
+
+        collectionReference.get()
+            .addOnSuccessListener { querySnapshot ->
+                val recordCount = querySnapshot.size()
+                //
+                Log.d(TAG, "Record count: $recordCount")
+            }
+            .addOnFailureListener { exception ->
+                // Handle the error
+            }
 
     }
 

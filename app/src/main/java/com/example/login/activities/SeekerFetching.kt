@@ -1,8 +1,10 @@
 package com.example.login.activities
 
+import android.content.ContentValues
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.DatePicker
 import android.widget.TextView
@@ -12,6 +14,7 @@ import com.example.login.R
 import com.example.login.adepters.JobSeekeAdapter
 import com.example.login.models.JobSeekerModel
 import com.google.firebase.database.*
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.Job
 
 class SeekerFetching : AppCompatActivity() {
@@ -32,6 +35,19 @@ class SeekerFetching : AppCompatActivity() {
 
         JobSeekerList = arrayListOf<JobSeekerModel>()
         getJobSeekersData()
+
+        //Count
+        val collectionReference = FirebaseFirestore.getInstance().collection("your_collection")
+
+        collectionReference.get()
+            .addOnSuccessListener { querySnapshot ->
+                val recordCount = querySnapshot.size()
+                //
+                Log.d(ContentValues.TAG, "Record count: $recordCount")
+            }
+            .addOnFailureListener { exception ->
+                // Handle the error
+            }
     }
 
     private fun getJobSeekersData() {

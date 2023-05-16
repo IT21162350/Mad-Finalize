@@ -28,7 +28,7 @@ class add_job : AppCompatActivity() {
     private lateinit var  dbRef: DatabaseReference;
 
     //patterns
-    private var pattern = Regex("^\\w+([.-]?\\w+)*@\\w+([.-]?\\w+)*(\\.\\w{2,3})+$")
+    private var pattern = Regex("^\\w+([.-]?\\w+)*@gmail\\.com$")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -79,7 +79,7 @@ class add_job : AppCompatActivity() {
         if (c_email.isEmpty()) {
             conEmail.error = "Please add an Email to Contact"
         }
-        if (!pattern.matches(title)) {
+        if (!pattern.matches(c_email)) {
             conEmail.error = "Invalid Email "
         }
         else {

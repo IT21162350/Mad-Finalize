@@ -1,5 +1,6 @@
 package com.example.login.activities
 
+import android.content.ContentValues
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -13,6 +14,7 @@ import com.example.login.adepters.GuiderAdapter
 import com.example.login.models.GuiderModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import com.google.firebase.firestore.FirebaseFirestore
 
 class GuiderList : AppCompatActivity() {
     private lateinit var guiderRecyclerView: RecyclerView
@@ -31,6 +33,19 @@ class GuiderList : AppCompatActivity() {
 
         guiderList = arrayListOf<GuiderModel>()
         getGuiderData()
+
+        //Count
+        val collectionReference = FirebaseFirestore.getInstance().collection("your_collection")
+
+        collectionReference.get()
+            .addOnSuccessListener { querySnapshot ->
+                val recordCount = querySnapshot.size()
+                //
+                Log.d(ContentValues.TAG, "Record count: $recordCount")
+            }
+            .addOnFailureListener { exception ->
+                // Handle the error
+            }
 
     }
     private fun getGuiderData() {

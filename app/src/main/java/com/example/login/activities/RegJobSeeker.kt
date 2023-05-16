@@ -47,6 +47,7 @@ class RegJobSeeker : AppCompatActivity() {
         saveData.setOnClickListener {
             saveJobSeekerData()
         }
+
     }
 
     private fun saveJobSeekerData() {
@@ -82,6 +83,7 @@ class RegJobSeeker : AppCompatActivity() {
         }
         if (jsPassword != jsconPassword || jsconPassword !=jsPassword){
             Toast.makeText(applicationContext, "Password is mismatching", Toast.LENGTH_SHORT).show()
+
         } else if (!pattern.matches(jsEmail)) {
             etJsEmail.error = "Invalid Email "
         }
